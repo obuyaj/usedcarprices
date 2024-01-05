@@ -69,5 +69,27 @@ prediction = load_clf.predict(df)
 
 st.subheader('Prediction')
 price = np.round(np.exp(prediction), 0)
-st.write('Your car value in USD is approximately:', price)
+st.write( price)
 
+st.write("""
+About the features: 
+Value — Predicted value of the car in US dollar based on May 2021 prices.
+Age — The age of the car since it was manufactured in years
+Condition — The condition of the car; good, fair, like new
+Cylinders — The number of cylinders in the car engine ranging from 3 to 12. 
+Fuel — The type of fuel the car uses: ‘diesel’, ‘gas’, ‘electric’, and ‘hybrid’.
+Odometer — This is the distance in miles that the car has traveled since it was manufactured.
+Transmission – Transmission type of the vehicle: ‘automatic’ or ‘manual’
+Drive — There are 3 types of drive transmissions; ‘4WD, ‘FWD’ and ‘RWD’. (Four wheel drive, forward wheel drive and rear wheel drive.)
+Size – Details on the size of the vehicle: 'full-size', 'compact', 'mid-size', 'sub-compact'
+Type — This feature identifies if a vehicle is a SUV or a mini-van. There 13 unique values in this feature.
+
+#### Vehicle sizes
+Subcompact: Have 85 to 89 cubit feet between their passenger and cargo areas, and they are 157 to 165 inches long. Some fit up to four passengers, and some fit up to five. Subcompacts are often the least expensive, and are typically cheaper to insure and repair. Some are also more fuel efficient, so you’re saving more money. 
+Compact: Is also called a small car. It can be a two-door, four-door, hatchback, or sports coupe. 
+Compacts have between 100 and 109 cubic feet of interior space. 
+Midsize: vehicles are generally the most popular because they aren’t too big or too small. Cars in this category have between 110 and 120 cubic feet of combined passenger and cargo space, and hatchbacks have between 130 and 159 cubic feet. They seat up to five people, like most compacts, but they have more head and leg room. They offer lots of room for passengers and cargo, so you can take a few friends or family members on a road trip, or haul sports gear, luggage, or other large items. A midsize car or hatchback is a happy medium.
+Full-Size:The biggest kind of car is a full-size, which is also known as large. To earn this classification, a car just has to have more than 120 cubic feet of interior space. Station Wagons have over 160 cubic feet. That means there’s tons of room in the cabin, and lots of trunk space. They seat up to five people.
+""")
+
+st.write("Created by [Joshua Obuya](https://www.linkedin.com/in/joshua-obuya-80849956/)") 
