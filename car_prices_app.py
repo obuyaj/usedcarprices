@@ -67,9 +67,10 @@ df = sc.transform(df)
 #Apply model to make predictions
 prediction = load_clf.predict(df)
 
-st.subheader('Prediction')
 price = np.round(np.exp(prediction), 0)
-st.write( price)
+
+st.subheader('The predicted car value is approximately $'price)
+
 
 st.divider()
 st.write("""
@@ -84,8 +85,10 @@ Value — Predicted value of the car in US dollar based on May 2021 prices.
 \nDrive — There are 3 types of drive transmissions; ‘4WD, ‘FWD’ and ‘RWD’. (Four wheel drive, forward wheel drive and rear wheel drive.)
 \nSize – Details on the size of the vehicle: 'full-size', 'compact', 'mid-size', 'sub-compact'
 \nType — This feature identifies if a vehicle is a SUV or a mini-van. There 13 unique values in this feature.
+""")
 
 st.divider()
+st.write("""
 \nVehicle sizes glosary:
 \nSubcompact — Have 85 to 89 cubit feet between their passenger and cargo areas, and they are 157 to 165 inches long. Some fit up to four passengers, and some fit up to five. Are normally cheapest to buy and maintain.
 \nCompact — Is also called a small car, but bigger than subcompact cars. Compacts have between 100 and 109 cubic feet of interior space. 
