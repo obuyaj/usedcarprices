@@ -69,8 +69,9 @@ df = sc.transform(df)
 prediction = load_clf.predict(df)
 
 price = np.round(np.exp(prediction), 0)
+price = float(price[0])
 
-st.write("The predicted car value is approximately **{}** usd".format(price))
+st.write("The predicted car value is approximately **{:,.1f}** usd".format(price))
 
 
 st.divider()
