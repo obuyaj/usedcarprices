@@ -69,7 +69,7 @@ prediction = load_clf.predict(df)
 
 price = np.round(np.exp(prediction), 0)
 
-st.write(f'The predicted car value is approximately **{price}**')
+st.write(f'The predicted car value is approximately **$price**')
 
 
 st.divider()
