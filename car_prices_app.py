@@ -6,6 +6,7 @@ import pandas as pd
 import numpy as np
 import pickle
 
+st.write('if using mobile device, tap on top left arrow to input values')
 
 st.write("""
 # Car Value Prediction App
@@ -17,15 +18,15 @@ st.sidebar.header('User Input Features')
 
 # collects user input features into dataframe
 def car_details():
-    age = st.sidebar.number_input('Age of vehicle is:', min_value=0, max_value=30)
+    age = st.sidebar.number_input('Age of vehicle in years is:', min_value=0, max_value=30)
     odometer = st.sidebar.number_input('mileage on the vehicle is:', min_value=1000, max_value=5000000)
-    condition = st.sidebar.selectbox('condition',('good', 'like new', 'fair'))
-    cylinders = st.sidebar.selectbox('cylinders',('3 cylinders', '4 cylinders', '5 cylinders', '6 cylinders', '8 cylinders', '10 cylinders', '12 cylinders'))
-    fuel = st.sidebar.selectbox('fuel',('gas', 'hybrid', 'diesel', 'electric'))
-    transmission = st.sidebar.selectbox('transmission',('automatic', 'manual'))
-    drive = st.sidebar.selectbox('drive',('rwd', '4wd', 'fwd'))
-    size = st.sidebar.selectbox('size',('full-size', 'mid-size', 'sub-compact', 'compact'))
-    ctype = st.sidebar.selectbox('type',('bus', 'convertible', 'coupe', 'hatchback', 'mini-van', 'offroad', 'pickup', 'sedan', 'SUV', 'truck', 'van', 'wagon'))
+    condition = st.sidebar.selectbox('condition of the vehigle is',('good', 'like new', 'fair'))
+    cylinders = st.sidebar.selectbox('vehicle engine cylinders',('3 cylinders', '4 cylinders', '5 cylinders', '6 cylinders', '8 cylinders', '10 cylinders', '12 cylinders'))
+    fuel = st.sidebar.selectbox('fuel used',('gas', 'hybrid', 'diesel', 'electric'))
+    transmission = st.sidebar.selectbox('engine transmission type',('automatic', 'manual'))
+    drive = st.sidebar.selectbox('vehicle drive type',('rwd', '4wd', 'fwd'))
+    size = st.sidebar.selectbox('size of vehicle',('full-size', 'mid-size', 'sub-compact', 'compact'))
+    ctype = st.sidebar.selectbox('type of vehicle',('bus', 'convertible', 'coupe', 'hatchback', 'mini-van', 'offroad', 'pickup', 'sedan', 'SUV', 'truck', 'van', 'wagon'))
     data = {'age': age,
             'odometer' : odometer,
             'condition' : condition,
