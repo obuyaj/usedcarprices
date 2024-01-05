@@ -68,7 +68,7 @@ df = sc.transform(df)
 #Apply model to make predictions
 prediction = load_clf.predict(df)
 
-price = np.format(np.round(np.exp(prediction), 0), f'{number:,}')
+price = np.round(np.exp(prediction), 0)
 
 st.write(f'The predicted car value is approximately **${price}**')
 
