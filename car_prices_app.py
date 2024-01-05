@@ -85,12 +85,12 @@ Value — Predicted value of the car in US dollar based on May 2021 prices.
 \nSize – Details on the size of the vehicle: 'full-size', 'compact', 'mid-size', 'sub-compact'
 \nType — This feature identifies if a vehicle is a SUV or a mini-van. There 13 unique values in this feature.
 
-#### Vehicle sizes
-Subcompact: Have 85 to 89 cubit feet between their passenger and cargo areas, and they are 157 to 165 inches long. Some fit up to four passengers, and some fit up to five. Subcompacts are often the least expensive, and are typically cheaper to insure and repair. Some are also more fuel efficient, so you’re saving more money. 
-\nCompact: Is also called a small car. It can be a two-door, four-door, hatchback, or sports coupe. 
-Compacts have between 100 and 109 cubic feet of interior space. 
-\nMidsize: vehicles are generally the most popular because they aren’t too big or too small. Cars in this category have between 110 and 120 cubic feet of combined passenger and cargo space, and hatchbacks have between 130 and 159 cubic feet. They seat up to five people, like most compacts, but they have more head and leg room. They offer lots of room for passengers and cargo, so you can take a few friends or family members on a road trip, or haul sports gear, luggage, or other large items. A midsize car or hatchback is a happy medium.
-\nFull-Size:The biggest kind of car is a full-size, which is also known as large. To earn this classification, a car just has to have more than 120 cubic feet of interior space. Station Wagons have over 160 cubic feet. That means there’s tons of room in the cabin, and lots of trunk space. They seat up to five people.
+\n
+\nVehicle sizes glosary:
+\nSubcompact — Have 85 to 89 cubit feet between their passenger and cargo areas, and they are 157 to 165 inches long. Some fit up to four passengers, and some fit up to five. Are normally cheapest to buy and maintain.
+\nCompact — Is also called a small car, but bigger than subcompact cars. Compacts have between 100 and 109 cubic feet of interior space. 
+\nMidsize — vehicles are generally the most popular because they aren’t too big or too small. Cars in this category have between 110 and 120 cubic feet of combined passenger and cargo space, and hatchbacks have between 130 and 159 cubic feet. They have more head and leg room than compact vehicles. 
+\nFull-Size — The biggest kind of car is a full-size, which is also known as large. To earn this classification, a car just has to have more than 120 cubic feet of interior space. Station Wagons have over 160 cubic feet. 
 """)
 
 st.write("Created by [Joshua Obuya](https://www.linkedin.com/in/joshua-obuya-80849956/)") 
