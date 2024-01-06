@@ -18,8 +18,8 @@ st.sidebar.header('User Input Features')
 
 # collects user input features into dataframe
 def car_details():
-    age = st.sidebar.number_input('Age of vehicle in years is:', min_value=0, max_value=30)
-    odometer = st.sidebar.number_input('mileage on the vehicle in miles is:', min_value=1000, max_value=5000000)
+    age = st.sidebar.number_input('Age of vehicle in years is', min_value=0, max_value=30)
+    odometer = st.sidebar.number_input('mileage on the vehicle in miles is', min_value=1000, max_value=5000000)
     condition = st.sidebar.selectbox('condition of the vehigle is',('good', 'like new', 'fair'))
     cylinders = st.sidebar.selectbox('vehicle engine cylinders',('3 cylinders', '4 cylinders', '5 cylinders', '6 cylinders', '8 cylinders', '10 cylinders', '12 cylinders'))
     fuel = st.sidebar.selectbox('fuel used',('gas', 'hybrid', 'diesel', 'electric'))
