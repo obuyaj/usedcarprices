@@ -78,7 +78,7 @@ st.divider()
 st.write("""
 #### About the features
 Value — Predicted value of the car in US dollar based on May 2021 prices.
-\nAge — The age of the car since it was manufactured in years
+\nAge — (Current year - Year of manufacture) 
 \nCondition — The condition of the car; good, fair, like new
 \nCylinders — The number of cylinders in the car engine ranging from 3 to 12. 
 \nFuel — The type of fuel the car uses: ‘diesel’, ‘gas’, ‘electric’, and ‘hybrid’.
@@ -92,10 +92,10 @@ Value — Predicted value of the car in US dollar based on May 2021 prices.
 st.divider()
 st.write("""
 \nVehicle sizes glosary:
-\nSubcompact — Have 85 to 89 cubit feet between their passenger and cargo areas, and they are 157 to 165 inches long. Some fit up to four passengers, and some fit up to five. Are normally cheapest to buy and maintain.
-\nCompact — Is also called a small car, but bigger than subcompact cars. Compacts have between 100 and 109 cubic feet of interior space. 
-\nMidsize — vehicles are generally the most popular because they aren’t too big or too small. Cars in this category have between 110 and 120 cubic feet of combined passenger and cargo space, and hatchbacks have between 130 and 159 cubic feet. They have more head and leg room than compact vehicles. 
-\nFull-Size — The biggest kind of car is a full-size, which is also known as large. To earn this classification, a car just has to have more than 120 cubic feet of interior space. Station Wagons have over 160 cubic feet. 
+\nSubcompact — Are the smallest type of cars. E.g Nissan Versa, Mini Cooper, Honda Fit, Hyundai ascent.
+\nCompact — Is also called a small car, but bigger than subcompact cars. E.g. Hyundai Elantra, Honda Civic.
+\nMidsize — Are generally the most popular because they aren’t too big or too small. E.g Honda Accord, Hyundai Sonata, Kia 5, Nissan Altima, Chevrolet Malibu. 
+\nFull-Size — The biggest kind of car is a full-size, which is also known as large. E.g Toyota Avalon, Kia Stinger, Dodge Charger, Chrystler 300. 
 """)
 st.divider()
 st.write("Created by [Joshua Obuya](https://www.linkedin.com/in/joshua-obuya-80849956/)") 
