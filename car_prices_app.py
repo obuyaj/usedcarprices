@@ -18,15 +18,6 @@ st.sidebar.header('User Input Features')
 
 # collects user input features into dataframe
 def car_details():
-    age = st.sidebar.number_input('Age of vehicle is:', min_value=0, max_value=30)
-    odometer = st.sidebar.number_input('mileage on the vehicle is:', min_value=1000, max_value=5000000)
-    condition = st.sidebar.selectbox('condition',('good', 'like new', 'fair'))
-    cylinders = st.sidebar.selectbox('cylinders',('3 cylinders', '4 cylinders', '5 cylinders', '6 cylinders', '8 cylinders', '10 cylinders', '12 cylinders'))
-    fuel = st.sidebar.selectbox('fuel',('gas', 'hybrid', 'diesel', 'electric'))
-    transmission = st.sidebar.selectbox('transmission',('automatic', 'manual'))
-    drive = st.sidebar.selectbox('drive',('rwd', '4wd', 'fwd'))
-    size = st.sidebar.selectbox('size',('full-size', 'mid-size', 'sub-compact', 'compact'))
-    ctype = st.sidebar.selectbox('type',('bus', 'convertible', 'coupe', 'hatchback', 'mini-van', 'offroad', 'pickup', 'sedan', 'SUV', 'truck', 'van', 'wagon'))
     age = st.sidebar.number_input('Age of vehicle in years is', min_value=0, max_value=30)
     odometer = st.sidebar.number_input('mileage on the vehicle in miles is', min_value=1000, max_value=5000000)
     condition = st.sidebar.selectbox('condition of the vehicle is',('good', 'like new', 'fair'))
@@ -69,7 +60,12 @@ sc = pickle.load(open('scaler.pkl', 'rb')) #import scaler
 
 # Ensure the order of encoding columns is the same as during training
 
-cols = ['age', 'odometer', 'condition_fair', 'condition_good', 'condition_like new', 'cylinders_10 cylinders', 'cylinders_3 cylinders', 'cylinders_4 cylinders', 'cylinders_5 cylinders', 'cylinders_6 cylinders', 'cylinders_8 cylinders', 'fuel_diesel', 'fuel_electric', 'fuel_gas', 'fuel_hybrid', 'transmission_automatic', 'transmission_manual', 'drive_4wd', 'drive_fwd', 'drive_rwd', 'size_compact', 'size_full-size', 'size_mid-size', 'size_sub-compact', 'type_SUV', 'type_bus', 'type_convertible', 'type_coupe', 'type_hatchback', 'type_mini-van', 'type_offroad', 'type_pickup', 'type_sedan', 'type_truck', 'type_van', 'type_wagon']
+cols = ['age', 'odometer', 'condition_fair', 'condition_good', 'condition_like new', 'condition_salvage', 'cylinders_10 cylinders',
+       'cylinders_3 cylinders', 'cylinders_4 cylinders', 'cylinders_5 cylinders', 'cylinders_6 cylinders',
+       'cylinders_8 cylinders', 'fuel_diesel', 'fuel_electric', 'fuel_gas', 'fuel_hybrid', 'transmission_automatic', 'transmission_manual',
+       'drive_4wd', 'drive_fwd', 'drive_rwd', 'size_compact', 'size_full-size',  'size_mid-size', 'size_sub-compact', 'type_SUV', 'type_bus',
+       'type_convertible', 'type_coupe', 'type_hatchback', 'type_mini-van', 'type_offroad', 'type_pickup', 'type_sedan', 'type_truck', 'type_van',
+       'type_wagon']
 df = df.reindex(columns=cols, fill_value=False)
 df = sc.transform(df)
 
@@ -78,8 +74,6 @@ df = sc.transform(df)
 prediction = load_clf.predict(df)
 
 st.subheader('Prediction')
-price = np.round(np.exp(prediction), 0)
-st.write('Your car value in USD is approximately:', price)
 
 price = np.round(np.exp(prediction), 0)
 price = float(price[0])
