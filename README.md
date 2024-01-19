@@ -1,0 +1,1 @@
+This is a data driven web application that can be used to assess the value of a vehicle listed on craigslist.com based on May 2021 data. The model had an 87% accuracy on the testing data. The application can be accessed on https://usedcarprices-613dd34de994.herokuapp.com/
