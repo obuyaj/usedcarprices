@@ -9,7 +9,7 @@ import pickle
 st.write('if using mobile device, tap on top left arrow to input values')
 
 st.write("""
-# Car Value Prediction App
+# What's the Value of your Car or Vehicle?
 
 This app predicts the value of a used car based on 2021 May Alabama Car data
 """)
