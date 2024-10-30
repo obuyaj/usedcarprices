@@ -73,12 +73,12 @@ df = sc.transform(df)
 #Apply model to make predictions
 prediction = load_clf.predict(df)
 
-st.subheader('Prediction')
+st.subheader('Possible Value')
 
 price = np.round(np.exp(prediction), 0)
 price = float(price[0])
 
-st.markdown("The predicted car value is approximately **{:,.0f}** usd".format(price))
+st.markdown("I think that your car or vehicle is approximately **{:,.0f}** usd".format(price))
 
 
 st.divider()
